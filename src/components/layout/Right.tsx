@@ -14,30 +14,14 @@ export default function Right({ state, dispatch }: LeftProps) {
     <div className="box">
       <p className="box__label">Right</p>
 
-      <div className="box__row">
-        {blockTypes.map((t) => (
-          <button
-            key={t}
-            className="box__button"
-            onClick={() =>
-              dispatch({ type: "ADD_BLOCK", payload: { blockType: t } })
-            }
-          >
-            + {t.toUpperCase()}
-          </button>
-        ))}
-
-        <button
-          className="box__button box__button--ghost"
-          onClick={() => dispatch({ type: "CLEAR_ALL" })}
-        >
-          Reset
-        </button>
-      </div>
-
       <div className="box__list">
         {state.blocks.length === 0 ? (
-          <p className="box__muted">아직 없음</p>
+          <div className="memory-wrap">
+            {" "}
+            <div className="el__stack">stk</div>
+            <div className="el__heap">heap</div>
+            <div className="el__data">data</div>
+          </div>
         ) : (
           state.blocks.map((b) => (
             <div className="block" key={b.id}>

@@ -1,9 +1,10 @@
 import CodeblockWrapper from "./CodeblockWrapper";
 
 const demoCode = `
-function greet(name) {
-  return "Hello, " + name + "!";
-}
+  function A() {
+    const a = 1;
+    B();
+  }
 `;
 
 const demoLanguage = "javascript";

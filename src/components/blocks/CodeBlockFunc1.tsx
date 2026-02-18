@@ -1,9 +1,10 @@
 import CodeblockWrapper from "./CodeblockWrapper";
 
 const demoCode = `
-function B() {
-  const b = 2;
-}
+  function A() {
+    const a = 1;
+    B();
+  }
 `;
 
 const demoLanguage = "javascript";
