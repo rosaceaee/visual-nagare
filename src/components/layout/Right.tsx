@@ -8,6 +8,7 @@ type LeftProps = {
 
 const blockTypes: BlockType[] = ["block1", "block2", "block3"];
 
+// 메모리 블록 5개
 export default function Right({ state, dispatch }: LeftProps) {
   return (
     <div className="box">

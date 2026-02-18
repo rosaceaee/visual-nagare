@@ -1,4 +1,8 @@
 import type { Dispatch } from "react";
+import { CodeBlock } from "react-code-block";
+import CodeblockBox from "../blocks/CodeBlockBox";
+import CodeblockFunc2 from "../blocks/CodeblockFunc2";
+
 import type { BlocksAction, BlocksState, BlockType } from "../types";
 
 type LeftProps = {
@@ -12,7 +16,8 @@ export default function Left({ state, dispatch }: LeftProps) {
   return (
     <div className="box">
       <p className="box__label">LEFT</p>
-
+      <CodeblockBox />
+      <CodeblockFunc2 />
       <div className="box__row">
         {blockTypes.map((t) => (
           <button
